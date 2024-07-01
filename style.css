@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    border: 0;
+    outline: none;
+    background-color: #050a25a4;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+.text {
+    color: whitesmoke;
+    font-family: cursive;
+    padding: 120px 60px;
+    display: flex;
+    flex-direction: column;
+}
+li {
+    list-style: none;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+}
+img {
+    width: 50vh;
+    height: 200px;
+}
+
+@keyframes scrollBottom {
+    from {}
+
+    to {
+        bottom: 30rem;
+    }
+}
+@keyframes scrollTop {
+    from {}
+
+    to {
+        top: 30rem;
+    }
+}
+.left {
+    width: 50%;
+    padding: 10px;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    animation-name: scrollTop;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.right {
+    width: 50%;
+    padding: 10px;
+    bottom: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    animation-name: scrollBottom;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@media(max-width:1024px) {
+    .text {
+        width: 25%;
+        padding: 120px 10px;
+        display: flex;
+        flex-direction: column;
+        font-size: 80%;
+     }
+img {
+    width: 120px;
+    height: 150px;
+}
+.right {
+    right: -80px;
+}
+}
+
+@media(max-width:599px) {
+    .text {
+        display: none;
+     }
+img {
+    width: 120px;
+    height: 150px;
+}
+}
